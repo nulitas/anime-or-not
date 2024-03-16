@@ -13,7 +13,7 @@ I am not sure, but you can check this Prerequisites and Installation below.
 - Installed Python 2.7 or Python 3.5 and newer
 - CLI with administrator privileges
 
-This is an example of how to list things you need to use the software and how to install them.
+This is things you need to use the software and how to install them.
 
 - pip
 
@@ -22,9 +22,7 @@ This is an example of how to list things you need to use the software and how to
   ```
 
   ### Installation
-
-  _Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
-
+  
 - Run your application using flask run.
   ```sh
   flask run
