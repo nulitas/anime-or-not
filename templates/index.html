@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Anime OR Not</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="font-mono">
+    <header id="header" class="flex justify-around p-4">
+      <h1 class="font-semibold cursor-default">
+        Anime <span class="bg-blue-500 text-white p-1">OR</span> Not
+      </h1>
+    </header>
+
+    <main class="flex flex-col justify-center items-center h-[80vh]">
+      <h1>Upload your Anime pic</h1>
+      <form
+        action="/predict"
+        method="POST"
+        enctype="multipart/form-data"
+        class="flex flex-col justify-center items-center"
+      >
+        <input
+          type="file"
+          name="image"
+          accept="image/*"
+          id="upload"
+          onchange="previewImage(event)"
+          required
+          hidden
+        />
+        <label
+          for="upload"
+          class="bg-blue-500 cursor-pointer hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+          >Choose file</label
+        >
+
+        <div id="imagePreview" class="my-2"></div>
+        <input
+          class="bg-blue-500 cursor-pointer hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+          type="submit"
+          value="Predict"
+        />
+      </form>
+
+      {% if prediction %}
+      <h2 class="mt-2 font-bold">{{ prediction }}</h2>
+      {% endif %}
+    </main>
+
+    <script>
+      function previewImage(event) {
+        var input = event.target;
+        var reader = new FileReader();
+
+        reader.onload = function () {
+          var dataURL = reader.result;
+          var imagePreview = document.getElementById("imagePreview");
+          var img = document.createElement("img");
+          img.src = dataURL;
+          img.style.width = "300px";
+          img.style.height = "300px";
+          imagePreview.innerHTML = "";
+          imagePreview.appendChild(img);
+        };
+
+        reader.readAsDataURL(input.files[0]);
+      }
+    </script>
+  </body>
+</html>
