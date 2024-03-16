@@ -20,6 +20,17 @@ This is things you need to use the software and how to install them.
   ```sh
   pip install Flask
   ```
+  * Tensorflow
+
+  ```sh
+  pip install tensorflow
+  ```
+  * Open CV
+
+  ```sh
+  pip install opencv-python
+  ```
+  
 
 ### Installation
   
