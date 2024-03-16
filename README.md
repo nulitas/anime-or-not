@@ -23,7 +23,7 @@ This is things you need to use the software and how to install them.
 
 ### Installation
   
-1. Run your application using flask run.
+* Run your application using flask run
   ```sh
   flask run
   ```
