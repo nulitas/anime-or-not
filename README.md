@@ -21,7 +21,7 @@ This is things you need to use the software and how to install them.
   pip install Flask
   ```
 
-  ### Installation
+### Installation
   
 1. Run your application using flask run.
   ```sh
