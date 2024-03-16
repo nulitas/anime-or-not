@@ -15,7 +15,7 @@ I am not sure, but you can check this Prerequisites and Installation below.
 
 This is things you need to use the software and how to install them.
 
-- pip
+* pip
 
   ```sh
   pip install Flask
@@ -23,7 +23,7 @@ This is things you need to use the software and how to install them.
 
   ### Installation
   
-- Run your application using flask run.
+1. Run your application using flask run.
   ```sh
   flask run
   ```
